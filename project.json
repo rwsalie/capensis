@@ -1,0 +1,13 @@
+{
+    "$schema": "https://schemas.cute.engineering/stable/cutekit.manifest.project.v1",
+    "id": "rwsalie/capensis",
+    "type": "project",
+    "description": "a risky and hazardous operating system writing with modern C++",
+    "version": "v0.0.0",
+    "extern": {
+        "cute-engineering/ce-targets": {
+            "git": "https://github.com/cute-engineering/ce-targets.git",
+            "tag": "main"
+        }
+    }
+}

@@ -1,6 +1,6 @@
 BasedOnStyle: Mozilla
 AccessModifierOffset: '-4'
-AlignAfterOpenBracket: BlockIndent
+AlignAfterOpenBracket: Align
 AlignConsecutiveAssignments: 'true'
 AlignConsecutiveDeclarations: 'true'
 AlignEscapedNewlinesLeft: 'false'
@@ -12,15 +12,15 @@ AllowShortCaseLabelsOnASingleLine: 'false'
 AllowShortFunctionsOnASingleLine: All
 AllowShortIfStatementsOnASingleLine: 'false'
 AllowShortLoopsOnASingleLine: 'false'
-AlwaysBreakAfterDefinitionReturnType: All
-AlwaysBreakAfterReturnType: All
+AlwaysBreakAfterDefinitionReturnType: true
+AlwaysBreakAfterReturnType: None
 AlwaysBreakTemplateDeclarations: 'true'
 BreakBeforeBinaryOperators: All
 BreakBeforeBraces: Allman
 BreakBeforeTernaryOperators: 'true'
 BreakConstructorInitializersBeforeComma: 'true'
-BreakStringLiterals: 'true'
-ColumnLimit: '80'
+BreakStringLiterals: 'false'
+ColumnLimit: '100'
 ConstructorInitializerAllOnOneLineOrOnePerLine: 'false'
 ConstructorInitializerIndentWidth: '0'
 ContinuationIndentWidth: '4'

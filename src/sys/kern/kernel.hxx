@@ -1,4 +1,4 @@
-#include "arch/arch.hxx"
+#include "arch.hxx"
 
 #ifndef __KERNEL
 #define __KERNEL
@@ -12,18 +12,11 @@ private:
 public:
     Kernel();
 
-    auto
-    put_char(char) -> void;
-
-    auto
-    puts(char*) -> void;
-
-
     [[noreturn]] ~Kernel()
     {
-        puts((char*) "end...");
+        arch.cli();
         for (;;)
-            ;
+            arch.hlt();
         // Unreachable;
     }
 

@@ -1,0 +1,9 @@
+{
+    "$schema": "https://schemas.cute.engineering/stable/cutekit.manifest.component.v1",
+    "id": "capensis-libc",
+    "description": "a minimalist and simple libc for capensis",
+    "type": "lib",
+    "provides": [
+        "__main__"
+    ]
+}
