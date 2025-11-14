@@ -15,19 +15,23 @@ public:
 };
 #pragma pack(pop)
 
+class Cpu
+{
+};
+
 
 namespace types
 {
 
-typedef unsigned char      uint8_t;
-typedef unsigned short     uint16_t;
-typedef unsigned int       uint32_t;
-typedef unsigned long long uint64_t;
-typedef uint32_t           size_t;
-typedef uint32_t           paddr_t;
-typedef uint32_t           vaddr_t;
+typedef unsigned char      u8;
+typedef unsigned short     u16;
+typedef unsigned int       u32;
+typedef unsigned long long u64;
+typedef u32                size_t;
+typedef u32                paddr_t;
+typedef u32                vaddr_t;
 
-#define NULL ((void*) 0)
+constexpr void* nullptr_t = 0;
 #define align_up(value, align) __builtin_align_up(value, align)
 #define is_aligned(value, align) __builtin_is_aligned(value, align)
 #define offsetof(type, member) __builtin_offsetof(type, member)

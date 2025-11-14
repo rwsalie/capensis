@@ -1,12 +1,31 @@
-#include "arch.hxx"
-#include "string.h"
-#include "kernel.hxx"
+export module capensis.sys.kern:kernel;
 
-char* Kernel::__bss_end = __bss_end;
-char* Kernel::__bss     = __bss;
 
-Kernel::Kernel()
+namespace sys::kern
 {
-    memset(__bss, 0, __bss_end - __bss);
-    arch = Arch();
+
+export class Kernel
+{
+private:
+    static char *__bss, *__bss_end;
+    const Arch   arch;
+
+public:
+    Kernel() {}
+
+    [[noreturn]] ~Kernel()
+    {
+        arch.cli();
+        for (;;)
+            arch.hlt();
+        // Unreachable;
+    }
+
+    inline auto
+    get_arch() -> Arch*
+    {
+        return &this->arch;
+    }
+};
+
 }

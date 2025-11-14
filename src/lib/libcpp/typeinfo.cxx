@@ -1,13 +1,13 @@
-#ifndef __LIBCXX_TYPEINFO
-#define __LIBCXX_TYPEINFO
+export module capensis.lib.libcpp;
 
-#include "str.hxx"
 
+namespace libcpp
+{
 
 class typeinfo
 {
 public:
-    str  name;
+    Str  name;
     auto operator=(const typeinfo& other) -> typeinfo& = delete;
 };
 
@@ -18,4 +18,4 @@ _typeid(T t) -> str
     return str(t);
 }
 
-#endif
+}

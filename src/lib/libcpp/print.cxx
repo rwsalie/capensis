@@ -12,6 +12,6 @@ println(const char* c) -> void
 
 template<typename... Args>
 auto
-println(const char* c, Args...) -> void
+println(const char*, Args...) -> void
 {
 }

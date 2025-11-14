@@ -1,22 +1,12 @@
-#ifndef __ARCH
-#define __ARCH
+export module capensis.sys:arch;
 
-#ifdef __riscv
-#include "arch/riscv32.hxx"
-// #elif defined(__aarch64__)
-// #include "arm64.hxx"
-#else
-#error "not yet."
-#endif
-
-
-enum Syscall
+namespace sys
 {
-    PUTCHAR = 0
-};
+
+export enum Syscall { PUTCHAR = 0 };
 
 
-class Arch
+export class Arch
 {
 public:
     template<Syscall, typename... args>
@@ -29,4 +19,4 @@ public:
     ~Arch() = default;
 };
 
-#endif
+}

@@ -1,29 +1,24 @@
-#ifndef __LIBCPP_ANY
-#define __LIBCPP_ANY
+export module capensis.lib.libcpp:any;
 
-#include <typeinfo.hxx>
-
-class any
+class Any
 {
 public:
-    any();
+    Any();
     template<typename T>
-    any(T);
+    Any(T);
     template<typename T>
-    any(T&);
+    Any(T&);
     template<typename T>
-    any(T&&);
-    ~any() = default;
+    Any(T&&);
+    ~Any() = default;
 };
 
 
 template<class T>
 auto
-any_cast(any& a) -> T
+any_cast(Any& a) -> T
 {
     T t;
     assert(_typeid(t) == _typeid(a));
     return a;
 }
-
-#endif
